@@ -1,0 +1,32 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Shift Planner{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/shift.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'base' %}">Home</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'generate_schedule' %}">Generate Schedule <small><small><small>(for admin)</small></small></small></a></li>
+            <li><a href="{% url 'enter_availability' %}">Enter Availability</a></li>
+            <li><a href="{% url 'generate_pdf' %}">Generate pdf<small><small><small><br>(for admin)</br></small></small></small></a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'generate_schedule' %}">Generate Schedule</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
