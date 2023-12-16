@@ -83,7 +83,6 @@ class ScheduleForm(forms.ModelForm):
 
     def save(self, commit=True):
         if not self.instance.user.is_staff:
-            # Ustaw pole user na specjalnego użytkownika lub inny sposób obsługi braku przypisania użytkownika
             self.instance.user = get_special_user()  # Zastąp funkcję get_special_user() odpowiednią implementacją
 
         return super(ScheduleForm, self).save(commit)
