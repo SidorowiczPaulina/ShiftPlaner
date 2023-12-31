@@ -1,6 +1,4 @@
-from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from django.db import models
 from django.utils import timezone
 from .constants import SHIFT_CHOICES
 from django import forms
@@ -49,7 +47,6 @@ class UserAvailability(models.Model):
             raise ValidationError("Data nie może być z przeszłości.")
 
 
-
 class WorkRestrictions(models.Model):
     work_restriction_id = models.AutoField(primary_key=True)
     max_daily_hours = models.PositiveIntegerField(8)
@@ -66,7 +63,7 @@ class Schedule(models.Model):
     shift_id = models.ForeignKey(Shift, on_delete=models.CASCADE)
     work_date = models.DateField()
     month = models.IntegerField(default=0)  # Domyślna wartość
-    year = models.IntegerField(default=0)   # Domyślna wartość
+    year = models.IntegerField(default=0)  # Domyślna wartość
 
     def __str__(self):
         return f"Schedule {self.UniqueID}"
