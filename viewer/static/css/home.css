@@ -7,8 +7,8 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Umieszcza ramkę na dole ekranu */
-    padding-bottom: 20px; /* Dodatkowy margines od dołu, aby uniknąć przysłonięcia treści przez pasek przewijania */
+    justify-content: flex-end;
+    padding-bottom: 20px;
     opacity: 1;
 }
 
@@ -20,7 +20,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Umieszcza ramkę na górze ekranu */
+    justify-content: flex-start;
 }
 
 .content-container {

@@ -80,6 +80,6 @@ class ScheduleForm(forms.ModelForm):
 
     def save(self, commit=True):
         if not self.instance.user.is_staff:
-            self.instance.user = get_special_user()  # Zastąp funkcję get_special_user() odpowiednią implementacją
+            self.instance.user = get_special_user()
 
         return super(ScheduleForm, self).save(commit)
