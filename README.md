@@ -19,8 +19,8 @@ Welcome to our Shift Planer. If you must to create some work schedule you can us
 ## Backend - Python and Django
 We provided a backend foundation by using Python 3.11.3 and Django 5.0. Python offers the latest features, bug fixes and optimizations, which contributes to effective and modern application development. Django 5.0, as a high-level web framework, provides tools for quickly creating solid web applications.
 
-## Fronted - HTML5, CSS, JavaScript
-In order to create a user-friendly look, we used popular frontend technologies HTML5, CSS and JavaScript.
+## Fronted - HTML5, CSS, JavaScript, Bootstrap
+In order to create a user-friendly look, we used popular frontend technologies HTML5, CSS, Bootstrap and JavaScript.
 
 # Instalation process
 
