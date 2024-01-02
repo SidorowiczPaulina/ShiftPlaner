@@ -36,13 +36,15 @@ In order to create a user-friendly look, we used popular frontend technologies H
 
 3. Create virtual environment
 
-      for windows
+       $ python -m venv venv
+
+      activate for windows
         
-        $ python -m venv venv
-
-      for Linux
-
         $ python venv\Scripts\activate
+
+      activate for Linux
+
+        $ cource venv/bin/activate
      
 
 5. Install the required dependencies
