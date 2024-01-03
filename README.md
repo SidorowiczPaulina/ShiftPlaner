@@ -44,7 +44,7 @@ In order to create a user-friendly look, we used popular frontend technologies H
 
       activate for Linux
 
-        $ cource venv/bin/activate
+        $ source venv/bin/activate
      
 
 5. Install the required dependencies
